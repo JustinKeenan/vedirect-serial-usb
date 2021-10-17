@@ -8,14 +8,14 @@ module.exports = function (app) {
   let parser = []
   let shaddow = null
   const plugin = {}
-  plugin.id = 'vedirect-signalk'
-  plugin.name = 'VE.Direct to Signal K'
+  plugin.id = 'vedirect-signalk'  //rename this plugin
+  plugin.name = 'VE.Direct to Signal K' //rename this plugin
   plugin.description = plugin.name
 
   plugin.start = function (options) {
     shaddow = options;
 
-    if (typeof options.vedirect !== 'undefined') {
+    if (typeof options.vedirect !== 'undefined') { //rename this object
       Object.keys(options.vedirect).forEach(items => {
         parser[items] = new Parser(options)
 
